@@ -1,0 +1,48 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\jre\bin;D:\apache-maven-3.5.3\apache-maven-3.5.3\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\Program Files\Git\cmd;D:\Program Files\nodejs\;D:\Program Files (x86)\Tencent\微信web开发者工具\dll;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;D:\Program Files\JetBrains\WebStorm 2019.3\bin;;D:\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  12.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\Administrator\AppData\Local\Yarn\Cache\v6\npm-postcss-8.4.5-bae665764dfd4c6fcc24dc0fdf7e7aa00cc77f95-integrity\node_modules\postcss\lib\comment.d.ts' -> 'F:\learning\vue\q-transfer\node_modules\vite\node_modules\postcss\lib\comment.d.ts'
+
+npm manifest: 
+  {
+    "name": "vue-ts-vite",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite --host 0.0.0.0",
+      "build": "vue-tsc --noEmit && vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "vue": "^3.2.13"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-vue": "^1.9.0",
+      "@vitejs/plugin-vue-jsx": "^1.1.8",
+      "autoprefixer": "^9.8.7",
+      "babel-plugin-import": "^1.13.3",
+      "postcss": "^7.0.38",
+      "typescript": "^4.4.3",
+      "vite": "2.6.13",
+      "vite-plugin-style-import": "^1.2.1",
+      "vue-tsc": "^0.3.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
