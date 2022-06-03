@@ -11,21 +11,19 @@ export interface SelectItem {
 	value: string | number;
 }
 export interface Input {
-	show: boolean; //是否显示
-	placeholder: string;
-	value: number | string; //默认值
+	show?: boolean; //是否显示
+	placeholder?: string;
 }
 export interface Select {
-	show: boolean; //是否显示
-	placeholder: string;
-	dicData: SelectItem[]; //选项值
-	value: string | number; //默认值
+	show?: boolean; //是否显示
+	placeholder?: string;
+	dicData?: SelectItem[]; //选项值
 }
 export interface Page {
-	show: boolean; //是否显示分页
-	rTotalPage: number; //右侧分页总数
-	lTotalPage: number; //左侧分页总数
-	pageSize: number; //每页大小
+	show?: boolean; //是否显示分页
+	rTotalPage?: number; //右侧分页总数
+	lTotalPage?: number; //左侧分页总数
+	pageSize?: number; //每页大小
 }
 export interface Config {
 	input: Input;

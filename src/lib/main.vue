@@ -87,14 +87,41 @@
 	</div>
 </template>
 <script lang="ts" setup>
-import { watch, ref, Ref, reactive, toRefs } from 'vue';
-import { ColumnItem, SelectItem, Config, Page } from './types.ts';
+import { ref, Ref, reactive, toRefs } from 'vue';
+import { Config } from './types';
 export interface Props {
 	leftData: []; //接收左边数据
 	rightData: []; //接收左边数据
 	config: Config; //配置项
 }
-const props = withDefaults(defineProps<Props>(), { pageSize: 100 });
+const defaultProps = {
+	input: {
+		show: true, //是否显示
+		placeholder: '请输入筛选条件',
+	},
+	select: {
+		show: true, //是否显示
+		placeholder: '请选择',
+		dicData: [], //选项值
+	},
+	page: {
+		show: true, //是否显示分页
+		rTotalPage: 0, //右侧分页总数
+		lTotalPage: 0, //左侧分页总数
+		pageSize: 100, //每页大小
+	},
+	columnData: [],
+};
+let props = defineProps<Props>();
+const deepAssign = (defaultConfig: any, config: any) => {
+	for (const key in config) {
+		if (typeof config[key] === 'object') {
+			config[key] = Object.assign(defaultConfig[key], config[key]);
+		}
+	}
+};
+deepAssign(defaultProps, props.config);
+
 let rightDataIng: Ref<any[]> = ref([]);
 let leftDataIng: Ref<any[]> = ref([]);
 const state = reactive({

@@ -1,6 +1,6 @@
 {
 	"name": "q-transfer",
-	"version": "1.1.8",
+	"version": "1.1.9",
 	"description": "vue3+ts 基于element-plus,可自定义的表格穿梭框",
 	"author": "itperson <virtual1680@gmail.com>",
 	"license": "MIT",
