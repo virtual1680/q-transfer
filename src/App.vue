@@ -9,7 +9,7 @@
 		<!-- 自定义插槽 在config columnData 中设置slot：true -->
 		<template v-slot:roleName="scope">
 			<div>
-				{{ scope.data.roleName == '1' ? '高手' : '低手' }}
+				{{ scope.data.roleName === '1' ? '高手' : '低手' }}
 			</div>
 		</template>
 	</q-transfer>

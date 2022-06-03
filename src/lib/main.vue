@@ -24,7 +24,7 @@
 							<el-table-column type="selection" width="45"></el-table-column>
 							<el-table-column v-for="(item, index) in columnData" :key="index" :fixed="item.fixed" :prop="item.prop" :label="item.label" :width="item.width">
 								<template v-slot="scope">
-									<slot :name="item.prop" v-if="item.custom" :data="scope['row']"></slot>
+									<slot :name="item.prop" v-if="item.slot" :data="scope['row']"></slot>
 									<div v-else>{{ scope.row['' + item.prop] }}</div>
 								</template>
 							</el-table-column>
@@ -72,7 +72,7 @@
 							<el-table-column type="selection" width="45"></el-table-column>
 							<el-table-column v-for="(item, index) in columnData" :key="index" :fixed="item.fixed" :prop="item.prop" :label="item.label" :width="item.width">
 								<template v-slot="scope">
-									<slot :name="item.prop" v-if="item.custom" :data="scope['row']"></slot>
+									<slot :name="item.prop" v-if="item.slot" :data="scope['row']"></slot>
 									<div v-else>{{ scope.row['' + item.prop] }}</div>
 								</template>
 							</el-table-column>
