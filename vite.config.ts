@@ -7,7 +7,6 @@ import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-
 	resolve: {
 		alias: {
 			'@': resolve(__dirname, 'src'),
@@ -21,23 +20,20 @@ export default defineConfig({
 		},
 		port: 3000,
 		proxy: {
-			"/api": {
+			'/api': {
 				target: 'http://api.test.travel.lecent.cn/',
 				changeOrigin: true,
-				rewrite: (path) => path.replace(/^\/api/, '/')
+				rewrite: path => path.replace(/^\/api/, '/'),
 			},
-		}
+		},
 	},
 
-	plugins: [
-		vue(),
-		vueJsx(),
-	],
+	plugins: [vue(), vueJsx()],
 	build: {
 		lib: {
 			entry: resolve(__dirname, 'src/lib/index.ts'),
 			name: 'QTransfer',
-			fileName: (format) => `q-transfer.${format}.js`
+			fileName: format => `q-transfer.${format}.js`,
 		},
 		minify: 'terser',
 		terserOptions: {
@@ -55,10 +51,9 @@ export default defineConfig({
 				// 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
 				globals: {
 					vue: 'Vue',
-					'ElementPlus': 'ElementPlus'
-				}
-			}
-		}
+					ElementPlus: 'ElementPlus',
+				},
+			},
+		},
 	},
 });
-
