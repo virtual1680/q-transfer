@@ -13,13 +13,17 @@
 			</div>
 		</template>
 	</q-transfer>
+	<qv-rate />
+	<qv-input size="small" style="width: 1em; height: 1em; margin-right: 8px" />
 </template>
 
 <script lang="ts">
+import { QvRate, QvInput } from 'qv-vue';
 import { reactive, defineComponent } from 'vue';
 
 export default defineComponent({
 	name: 'App',
+	components: { QvRate, QvInput },
 	setup() {
 		console.log('开始加载了---');
 
